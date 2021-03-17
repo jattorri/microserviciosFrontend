@@ -53,15 +53,13 @@ export abstract class CommonListarComponent<E extends Generic, S extends CommonS
       cancelButtonColor: '#d33',
       confirmButtonText: 'Si, eliminar!'
     }).then((result) => {
-      if (result.isConfirmed) {
+      if (result.value) {
         this.service.eliminar(e.id).subscribe(()=>{
-          
           this.calcularRangos();
           Swal.fire('Eliminado:', `${this.nombreModel} ${e.nombre} eliminado con exito`, 'success');
         });
       }
       });
-    
   }
 
 

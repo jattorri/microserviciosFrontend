@@ -8,8 +8,9 @@ import { CommonListarComponent } from '../common-listar.component';
   templateUrl: './alumnos.component.html',
   styleUrls: ['./alumnos.component.css']
 })
+
 export class AlumnosComponent 
-extends CommonListarComponent<Alumno, AlumnoService> {
+extends CommonListarComponent<Alumno, AlumnoService> implements OnInit{
 
 
   constructor(service: AlumnoService) {

@@ -6,8 +6,8 @@
         <form>
             <div class="form-group">
                 <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" class="form-control" id=nombre
-                [(ngModel)]="model.nombre">
+                <input type="text" name="nombre" class="form-control" id="nombre"
+                [(ngModel)]= "model.nombre">
                 <div class="alert alert-danger" *ngIf= "error?.nombre">
                     {{error.nombre}}
                 </div>
@@ -15,7 +15,7 @@
 
             <div class="form-group">
                 <button type="button" class="btn btn-primary" 
-                (click)="model.id? editar(): crear()">
+                (click)= "model.id? editar(): crear()">
                    {{model.id? 'Editar': 'Crear'}} 
                 </button>
             </div>

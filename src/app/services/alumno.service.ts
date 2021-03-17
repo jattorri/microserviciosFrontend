@@ -41,6 +41,10 @@ export class AlumnoService extends CommonService<Alumno>{
   , formData );
 }
 
+public filtrarPorNombre(nombre: string): Observable<Alumno[]> {
+    return this.http.get<Alumno[]>(`${this.baseEndpoint}/filtrar/${nombre}`);
+}
+
 
   }  
   
